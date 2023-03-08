@@ -129,7 +129,8 @@ StartLimitIntervalSec=0
 Type=simple
 User=root
 WorkingDirectory=/root
-ExecStart=/bin/bash ${CIDdir}/BotGen.sh
+wget -O /etc/CAT-BOT/BotGen.sh https://raw.githubusercontent.com/DanssBot/Multi/main/Rufus/ADM-db/BotGen.sh &>/dev/null
+    chmod +x ${CIDdir}/BotGen.sh
 Restart=always
 RestartSec=3s
 
