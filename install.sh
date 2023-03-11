@@ -91,7 +91,7 @@ install_inicial() {
   os_system
   repo "${vercion}"
   msgi -bar2
-  echo -e " \e[5m\e[1;100m   =====>> ►►     MULTI SCRIPT     ◄◄ <<=====    \e[1;37m"
+  echo -e " \e[5m\e[1;100m   =====>> ►►     MULTI SSSCRIPT     ◄◄ <<=====    \e[1;37m"
   msgi -bar2
   #-- VERIFICAR VERSION
   msgi -ama "   PREPARANDO INSTALACION | VERSION: $vesaoSCT"
@@ -135,7 +135,7 @@ password required pam_permit.so' >/etc/pam.d/common-password && chmod +x /etc/pa
   clear && clear
   apt update
   apt upgrade -y
-  wget -O /usr/bin/install https://raw.githubusercontent.com/NetVPS/Multi-Script/main/0-Instalador/install.sh &>/dev/null
+  wget -O /usr/bin/install https://raw.githubusercontent.com/DanssBot/Multi/main/install.sh &>/dev/null
   chmod +rwx /usr/bin/install
 }
 
@@ -233,7 +233,7 @@ install_latam() {
   mkdir -p /root/.ssh >/dev/null 2>&1
   mkdir -p /root/.ssh 2> /dev/null
   Install_key() {
-    wget /root/LATAM https://raw.githubusercontent.com/NetVPS/LATAM_Oficial/main/Instalador/install.sh -O /usr/bin/LATAM &>/dev/null
+    wget /root/LATAM https://raw.githubusercontent.com/DanssBot/Multi/main/install.sh -O /usr/bin/LATAM &>/dev/null
     chmod +x /usr/bin/LATAM
     /bin/cp /etc/skel/.bashrc ~/
     clear && clear
