@@ -244,7 +244,7 @@ install_latam() {
     Filotros="${SCPdir}/temp"
     IP=$(cat /root/.ssh/authrized_key.reg)
     function_verify() {
-      permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Generador-BOT/main/control")
+      permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Multi-Script/main/ChuGH-5.7u/Otros/ejecutar/IPcgh")
       [[ $(echo $permited | grep "${IP}") = "" ]] && {
         clear && clear
         echo -e "\n\n\n\e[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n                 CONATACTE A @Kalix1\n————————————————————————————————————————————————————\n\n\n"
