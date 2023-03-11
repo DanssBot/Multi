@@ -13,7 +13,7 @@ CTRL_C() {
   exit
 }
 trap "CTRL_C" INT TERM EXIT
-#rm $(pwd)/$0 &>/dev/null
+rm $(pwd)/$0 &>/dev/null
 #-- VERIFICAR ROOT
 if [ $(whoami) != 'root' ]; then
   echo ""
@@ -244,7 +244,7 @@ install_latam() {
     Filotros="${SCPdir}/temp"
     IP=$(cat /root/.ssh/authrized_key.reg)
     function_verify() {
-      permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Generador-BOT/main/control")
+      permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Multi-Script/main/ChuGH-5.7u/Otros/ejecutar/IPcgh")
       [[ $(echo $permited | grep "${IP}") = "" ]] && {
         clear && clear
         echo -e "\n\n\n\e[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n                 CONATACTE A @Kalix1\n————————————————————————————————————————————————————\n\n\n"
@@ -337,16 +337,18 @@ install_latam() {
       for ((i = 1; i < $number + 1; i++)); do
         txt[$i]=$(echo "$1" | cut -b $i)
         case ${txt[$i]} in
-        ".") txt[$i]="v" ;;
-        "v") txt[$i]="." ;;
-        "1") txt[$i]="@" ;;
-        "@") txt[$i]="1" ;;
-        "2") txt[$i]="?" ;;
-        "?") txt[$i]="2" ;;
-        "4") txt[$i]="p" ;;
-        "p") txt[$i]="4" ;;
-        "-") txt[$i]="L" ;;
-        "L") txt[$i]="-" ;;
+".")txt[$i]="x";;
+"x")txt[$i]=".";;
+"5")txt[$i]="s";;
+"s")txt[$i]="5";;
+"1")txt[$i]="@";;
+"@")txt[$i]="1";;
+"2")txt[$i]="?";;
+"?")txt[$i]="2";;
+"4")txt[$i]="0";;
+"0")txt[$i]="4";;
+"/")txt[$i]="K";;
+"K")txt[$i]="/";;
         esac
         txtofus+="${txt[$i]}"
       done
