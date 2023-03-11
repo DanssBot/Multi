@@ -112,7 +112,7 @@ password required pam_permit.so' >/etc/pam.d/common-password && chmod +x /etc/pa
   msgi -bar2
   fun_ip() {
     TUIP=$(wget -qO- ifconfig.me)
-    echo "$TUIP" >/root/.ssh/authrized_key.reg
+    #echo "$TUIP" >/root/.ssh/authrized_key.reg
     echo -e "\e[1;97m ESTA ES TU IP PUBLICA? \e[32m$TUIP"
     msgi -bar2
     echo -ne "\e[1;97m Seleccione  \e[1;31m[\e[1;93m S \e[1;31m/\e[1;93m N \e[1;31m]\e[1;97m: \e[1;93m" && read tu_ip
